@@ -3,7 +3,7 @@ import urllib2
 from bs4 import BeautifulSoup
 
 def parseData(url):
-	print 'In url parsing'
+	print url
 	webpage = urllib2.urlopen(url).read()
 	soup = BeautifulSoup(webpage, "html.parser")
 	info = ['', '', '', '', '']
@@ -39,9 +39,9 @@ def parseData(url):
 #	print info
 	return info
 
-with open('testSample.csv','rb') as houses:
+with open('hyperlinkPart3.csv','rb') as houses:
 	reader = csv.reader(houses)
-	f = open('testSample1.csv','wb')
+	f = open('nonGeoFullDataPart3.csv','wb')
 	writer = csv.writer(f)
 	firstRow = 1
 	for row in reader:

@@ -7,7 +7,7 @@ monthEndDate = [("01","31"), ("02","28"), ("03","31"), ("04","30"), ("05","31"),
 for year in range(2005,2016):
 	yearStr = str(year)
 	for date in monthEndDate:
-		url = "http://property.spatialest.com/nc/durham/phpcode/createExcel.php?cond="+yearStr+"-"+date[0]+"-01_"+yearStr+"-"+date[0]+"-"+date[1]+"_saledate:"
+		url = "http://property.spatialest.com/nc/durham/phpcode/createExcel.php?cond="+yearStr+"-"+date[0]+"-01_"+yearStr+"-"+date[0]+"-"+date[1]+"_saledate:111_luc:"
 		recordname = yearStr+"-"+date[0]+".xls"
 		print(url)
 		urllib.urlretrieve(url, recordname)
